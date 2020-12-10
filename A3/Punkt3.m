@@ -23,7 +23,9 @@ H = HSV(:,:,1);
 S = HSV(:,:,2);
 V = HSV(:,:,3);
 M((H > 0.2) & (H < 0.37) & (V > 0.8) & (S > 0.4)) = 255;
+
 M = medfilt2(M);
+%bring in meinem Fall kaum Änderung im Bild
 
 NR = N(:,:,1);
 NG = N(:,:,2);
